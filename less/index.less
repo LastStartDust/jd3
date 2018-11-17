@@ -1,0 +1,183 @@
+@import "base.less";
+
+/*轮播图区域*/
+#slide {
+    a {
+        display: block;
+        width: 100%;
+        >img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 1px solid #fff;
+        opacity: 1;
+    }
+
+    /*修改轮播图的指示器选中时的颜色*/
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+    
+}
+
+/* 导航区域 */ 
+#nav {
+    padding: 0.2702702702702703rem;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li {
+            /*每个占1/4 */ 
+            flex: 25%;
+            text-align: center;
+            >a {
+                >img {
+                    display: block;
+                    width: 1.0810810810810811rem;
+                    height: 1.0810810810810811rem;
+                    margin: 0 auto;
+                }
+                >p {
+                    margin: 0.13513513513513514rem 0;
+                }
+            }
+        }  
+    }
+}
+/* 主体区域 */ 
+#main {
+    background-color: #f5f5f5;
+    padding: 0.2702702702702703rem;
+    /* 秒杀区域 */ 
+    .skill {
+        background-color: #fff;
+        margin-top: 0.13513513513513514rem;
+        box-shadow: 0 0 0.08108108108108109rem 0px #ccc;
+        .skill-title {
+            height: 0.8108108108108109rem;
+            line-height: 0.8108108108108109rem;
+            position: relative;
+            padding-left: 0.8108108108108109rem;
+
+            .skill-icon {
+                width: 0.5405405405405406rem;
+                height: 0.6756756756756757rem;
+                display: inline-block;
+                position: absolute;
+                left: 0.13513513513513514rem;
+                bottom: 0.08108108108108109rem;
+            }
+    
+            .skill-name {
+                color: @main-color;
+                margin: 0 0.13513513513513514rem;
+            }
+    
+            .skill-time {
+                >span {
+                    width: 0.40540540540540543rem;
+                    height: 0.40540540540540543rem;
+                    line-height: 0.40540540540540543rem;
+                    font-size: 0.40540540540540543rem;
+                    display: inline-block;
+                    background-color: #000;
+                    color: #fff;
+                    text-align: center;
+    
+                    &:nth-child(3n) {
+                        background-color: #fff;
+                        color: #000;
+                        width: 0.2702702702702703rem;
+                    }
+                }
+            }
+    
+            .skill-more {
+                margin-right: 0.40540540540540543rem;
+            }
+        }
+
+        .skill-content {
+            >ul {
+                display: flex;
+                >li {
+                    flex: 1;
+                    >a {
+                        display: block;
+                        text-align: center;
+                        .skill-img {
+                            display: inline-block;
+                            width: 2.972972972972973rem;
+                            height: 2.972972972972973rem;
+                        }
+                        .now-price {
+                            display: block;
+                            color: @main-color;
+                        }
+                        .old-price {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* 京东超市区域 */
+    .jd-market {
+        margin-top: 0.2702702702702703rem;
+        background-color: #fff;
+        box-shadow: 0 0 0.08108108108108109rem 0 @border-color;
+        .title {
+            width: 100%;
+            height: 0.8108108108108109rem;
+            line-height: 0.8108108108108109rem;
+            border-bottom: 1px solid @border-color;
+            position: relative;
+            padding-left: 0.5405405405405406rem;
+
+            >h4 {
+                font-weight: normal;
+                &::before {
+                    position: absolute;
+                    top: 0.1891891891891892rem;
+                    left: 0.2702702702702703rem;
+                    content: "";
+                    display: inline-block;
+                    width: 0.10810810810810811rem;
+                    height: 0.40540540540540543rem;
+                    background-color: @main-color;
+                }
+            }
+        }
+        .content {
+            display: flex;
+
+            .left {
+                flex: 1;
+                >a {
+                    display: block;
+                    >img {
+                        display: block;
+                       width: 100%;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                >a {
+                    display: block;
+                    >img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
